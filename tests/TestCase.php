@@ -2,9 +2,9 @@
 
 namespace Fuelviews\Vite\Tests;
 
+use Fuelviews\Vite\ViteServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Fuelviews\Vite\ViteServiceProvider;
 
 class TestCase extends Orchestra
 {

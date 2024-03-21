@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\File;
 use JsonException;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
+
 use function Laravel\Prompts\confirm;
 
 class ViteCommand extends Command
@@ -32,7 +33,7 @@ class ViteCommand extends Command
         $devDependencies = [
             'dotenv',
             'laravel-vite-plugin',
-            'vite'
+            'vite',
         ];
 
         $this->installNodePackages($devDependencies);

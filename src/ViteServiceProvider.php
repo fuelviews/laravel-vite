@@ -2,9 +2,9 @@
 
 namespace Fuelviews\Vite;
 
+use Fuelviews\Vite\Commands\ViteCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Fuelviews\Vite\Commands\ViteCommand;
 
 class ViteServiceProvider extends PackageServiceProvider
 {

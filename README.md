@@ -1,11 +1,11 @@
-# laravel vite package
+# Laravel vite package
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fuelviews/laravel-vite.svg?style=flat-square)](https://packagist.org/packages/fuelviews/laravel-vite)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/fuelviews/laravel-vite/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/fuelviews/laravel-vite/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/fuelviews/laravel-vite/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/fuelviews/laravel-vite/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/fuelviews/laravel-vite.svg?style=flat-square)](https://packagist.org/packages/fuelviews/laravel-vite)
 
-The Laravel vite package seamlessly integrates vite into laravel projects, enhancing front-end asset compilation with vite's modern build tooling capabilities.
+Laravel vite package quickly integrates opinionated vite defaults into laravel projects.
 
 ## Installation
 

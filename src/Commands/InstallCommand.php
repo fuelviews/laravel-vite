@@ -10,11 +10,11 @@ use Symfony\Component\Process\Process;
 
 use function Laravel\Prompts\confirm;
 
-class ViteCommand extends Command
+class InstallCommand extends Command
 {
-    public $signature = 'vite:install';
+    public $signature = 'vite:install {--force : Overwrite existing files without prompting}';
 
-    public $description = 'Install vite config and supporting dependencies';
+    public $description = 'Install vite.config.js and dependencies';
 
     /**
      * Execute the console command.
@@ -51,9 +51,10 @@ class ViteCommand extends Command
     {
         $stubPath = __DIR__."/../../resources/$configFileName.stub";
         $destinationPath = base_path($configFileName);
+        $force = $this->option('force');
 
         if (File::exists($destinationPath)) {
-            if (confirm("$configFileName already exists. Do you want to overwrite it?", false)) {
+            if ($force || confirm("$configFileName already exists. Do you want to overwrite it?", false)) {
                 File::copy($stubPath, $destinationPath);
                 $this->info("$configFileName has been overwritten successfully.");
             } else {

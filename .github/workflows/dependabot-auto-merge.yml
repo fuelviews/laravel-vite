@@ -1,5 +1,14 @@
-name: dependabot-auto-merge
-on: pull_request_target
+name: Dependabot Auto-merge
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+  pull_request_target:
+    types: [closed]
+    branches:
+      - main
 
 permissions:
   pull-requests: write
@@ -8,26 +17,26 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
 
       - name: Dependabot metadata
         id: metadata
-        uses: dependabot/fetch-metadata@v2.1.0
+        uses: dependabot/fetch-metadata@v2.2.0
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Auto-merge Dependabot PRs for semver-minor updates
         if: ${{steps.metadata.outputs.update-type == 'version-update:semver-minor'}}
-        run: gh pr merge --auto --merge "$PR_URL"
+        run: gh pr merge --auto --rebase "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: Auto-merge Dependabot PRs for semver-patch updates
         if: ${{steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
-        run: gh pr merge --auto --merge "$PR_URL"
+        run: gh pr merge --auto --rebase "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

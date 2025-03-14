@@ -2,6 +2,17 @@
 
 All notable changes to `laravel-vite` will be documented in this file.
 
+## v0.0.3 - 2025-03-14
+
+### What's Changed
+
+* Bump poseidon/wait-for-status-checks from 0.5.0 to 0.6.0 by @dependabot in https://github.com/fuelviews/laravel-vite/pull/13
+* Bump poseidon/wait-for-status-checks from 0.5.0 to 0.6.0 by @dependabot in https://github.com/fuelviews/laravel-vite/pull/14
+* Bump stefanzweifel/git-auto-commit-action from 4 to 5 by @dependabot in https://github.com/fuelviews/laravel-vite/pull/15
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot in https://github.com/fuelviews/laravel-vite/pull/16
+
+**Full Changelog**: https://github.com/fuelviews/laravel-vite/compare/v0.0.2...v0.0.3
+
 ## v0.0.2 - 2024-06-13
 
 ### What's Changed

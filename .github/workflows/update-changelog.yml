@@ -23,7 +23,7 @@ jobs:
           application_private_key: ${{ secrets.FUELVIEWS_BOT_APP_PRIVATE_KEY }}
 
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: 'main'
           token: ${{ steps.get_workflow_token.outputs.token }}
